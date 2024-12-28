@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        var jogador1 = prompt("Jogador 1, digite um número: ");
+        jogador1 = parseInt(jogador1);
+
+        var jogador2 = prompt("Jogador 2, digite um número: ");
+        jogador2 = parseInt(jogador2);
+
+        if(jogador1 == jogador2){
+            alert("Empate!");
+        } else{
+
+            aleatorio = (Math.random() * 2);
+        aleatorio = parseInt(aleatorio);        
+
+        if(aleatorio == 1){
+            if(jogador1 > jogador2){
+                alert("O maior número ganha. Jogador 1 ganhou!");
+            } else {
+                alert("O maior número ganha. Jogador 2 ganhou!");
+            }
+        }
+        if(aleatorio == 0){
+            if(jogador1 < jogador2){
+                alert("O menor número ganha. Jogador 1 ganhou!");
+            } else{
+                alert("O menor número. Jogador 2 ganhou!");
+            }
+        }
+        }
+    </script>
+
+</body>
+</html>
