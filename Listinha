@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="output"></div>
+    
+    <script>
+
+        let output = document.querySelector(".output");
+        let texto = ''
+
+        let produtos = [{'nome': 'Mouse', 'preco': 229.99, 'estoque': 15}, {'nome': 'Teclado', 'preco': 499.90, 'estoque': 40},]
+
+
+        for(let i = 0; i < produtos.length; i++){
+
+            texto += `<h2>${produtos[i].nome}</h2>  Preço: R$${produtos[i].preco.toFixed(2)} <br> Estoque: ${produtos[i].estoque} <br> <br>` 
+            text
+        }
+        output.innerHTML = texto;       
+    </script>
+</body>
+</html>
