@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<div>
+    <button onclick="produto.acao('+')">Gerar banana</button>
+    <div class="output"></div>
+    <button onclick="produto.acao('-')">Vender banana</button>
+</div>
+
+    <div class="output"></div>
+
+
+    <script>
+        let output = document.querySelector(".output");
+
+        let produto = new Object();
+        produto.estoque = 30
+        produto.preco = 19,98
+        produto.nome = "banana"
+        produto.possuido = 1
+        produto.vendido = 1
+        let saldo = 0;
+        produto.acao = function(simbolo){
+
+            switch(simbolo){
+                case '+': 
+                    this.possuido++;
+                    break;
+                case '-':    
+                if(this.vendido > 0 && this.possuido > 0) {               
+                        this.vendido++;                  
+                        this.possuido--;
+                        saldo = (this.preco * this.vendido)
+                    };
+                    break;
+            }
+                output.innerHTML = `Você possui ${this.possuido} bananas e vendeu ${this.vendido} bananas. <br> Saldo = R$ ${saldo}`
+       }
+       
+       
+    </script>
+
+
+
+</body>
+</html>
